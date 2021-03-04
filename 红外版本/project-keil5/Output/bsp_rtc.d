@@ -2,7 +2,7 @@
 ..\..\output\bsp_rtc.o: ..\..\User\./usart/bsp_usart.h
 ..\..\output\bsp_rtc.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\bsp_rtc.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\bsp_rtc.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\bsp_rtc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\bsp_rtc.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\bsp_rtc.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\bsp_rtc.o: ..\..\Libraries\FWlib\inc\stm32f10x_adc.h
@@ -29,8 +29,8 @@
 ..\..\output\bsp_rtc.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 ..\..\output\bsp_rtc.o: ..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h
 ..\..\output\bsp_rtc.o: ..\..\Libraries\FWlib\inc\misc.h
-..\..\output\bsp_rtc.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\bsp_rtc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\bsp_rtc.o: ..\..\User\./rtc/bsp_rtc.h
 ..\..\output\bsp_rtc.o: ..\..\User\./rtc/bsp_calendar.h
 ..\..\output\bsp_rtc.o: ..\..\User\./rtc/bsp_date.h
-..\..\output\bsp_rtc.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\bsp_rtc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

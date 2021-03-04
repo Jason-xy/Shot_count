@@ -1,9 +1,9 @@
 ..\..\output\esp8266.o: ..\..\User\esp8266\esp8266.c
 ..\..\output\esp8266.o: ..\..\User\./esp8266/esp8266.h
-..\..\output\esp8266.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
-..\..\output\esp8266.o: G:\MDK\ARM\ARMCC\Bin\..\include\string.h
-..\..\output\esp8266.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdio.h
-..\..\output\esp8266.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\esp8266.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\esp8266.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\esp8266.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\esp8266.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\..\output\esp8266.o: ..\..\User\./usart/bsp_usart.h
 ..\..\output\esp8266.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\esp8266.o: ..\..\Libraries\CMSIS\core_cm3.h

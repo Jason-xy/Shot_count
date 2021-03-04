@@ -1,9 +1,9 @@
 ..\..\output\main.o: ..\..\User\main.c
-..\..\output\main.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdio.h
-..\..\output\main.o: G:\MDK\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\main.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\main.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_adc.h
