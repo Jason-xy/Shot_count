@@ -23,6 +23,7 @@
 "shot_count\system_stm32f1xx.o"
 "shot_count\dyp-rd.o"
 "shot_count\esp8266.o"
+"shot_count\shot.o"
 --library_type=microlib --strict --scatter "Shot_count\Shot_count.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

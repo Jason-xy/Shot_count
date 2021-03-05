@@ -25,8 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "DYP-RD.H"
-#include "ESP8266.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,7 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint32_t DeviceID[3]={0}; //芯片全球唯一ID
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,8 +91,12 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_UART_Receive_IT(&huart1, (uint8_t *)aRxBuffer, 1);
-  HAL_TIM_Base_Start_IT(&htim1);
+  DeviceID[0] = HAL_GetUIDw0();//获取UID
+	DeviceID[1] = HAL_GetUIDw1();
+	DeviceID[2] = HAL_GetUIDw2();
+	
+  HAL_UART_Receive_IT(&huart1, (uint8_t *)aRxBuffer, 1);//传感器数据接收开始
+  HAL_TIM_Base_Start_IT(&htim1);//软件运行时基初始化
   /* USER CODE END 2 */
 
   /* Infinite loop */

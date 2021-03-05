@@ -28,9 +28,14 @@ shot_count\dyp-rd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 shot_count\dyp-rd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 shot_count\dyp-rd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 shot_count\dyp-rd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-shot_count\dyp-rd.o: ../Core/Inc/usart.h
 shot_count\dyp-rd.o: ../Core/Inc/main.h
-shot_count\dyp-rd.o: ..\Drivers\HW\inc\ESP8266.H
-shot_count\dyp-rd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+shot_count\dyp-rd.o: ..\APP\inc\shot.h
+shot_count\dyp-rd.o: ../Core/Inc/main.h
+shot_count\dyp-rd.o: ..\Drivers\HW\inc\DYP-RD.h
+shot_count\dyp-rd.o: ..\Drivers\HW\inc\ESP8266.h
+shot_count\dyp-rd.o: ../Core/Inc/gpio.h
+shot_count\dyp-rd.o: ../Core/Inc/tim.h
+shot_count\dyp-rd.o: ../Core/Inc/usart.h
 shot_count\dyp-rd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+shot_count\dyp-rd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 shot_count\dyp-rd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

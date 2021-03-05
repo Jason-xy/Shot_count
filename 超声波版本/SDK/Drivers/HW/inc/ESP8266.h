@@ -21,10 +21,7 @@
 #define __ESP8266_H__
 
 #include "stm32f1xx_hal.h"
-#include "usart.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 void ESP8266_cmd(char* cmd);    //发送AT指令
 void ESP8266_init(void);    //8266的初始化

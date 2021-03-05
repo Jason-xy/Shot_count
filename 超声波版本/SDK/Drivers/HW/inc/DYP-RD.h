@@ -20,11 +20,7 @@
 #define __DYPRD_H__
 
 #include "stm32f1xx_hal.h"
-#include "usart.h"
-#include "ESP8266.H"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 extern int Distance;
 

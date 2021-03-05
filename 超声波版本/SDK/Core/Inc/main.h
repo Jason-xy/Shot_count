@@ -32,6 +32,20 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+//Drivers & Applications
+#include "shot.h"
+#include "DYP-RD.h"
+#include "ESP8266.h"
+
+//BSP
+#include "gpio.h"
+#include "tim.h"
+#include "usart.h"
+
+//STD
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /* USER CODE END Includes */
 
@@ -59,7 +73,7 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 /* USER CODE BEGIN Private defines */
-
+extern uint32_t DeviceID[3];
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
