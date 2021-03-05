@@ -67,7 +67,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-   char s[100];
+   
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -100,9 +100,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	memset(s, 0, sizeof(char));
-	  sprintf(s, "Distance: %dmm\t", Distance);
-	ESP8266_cipsend(s);
+	
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -21,9 +21,16 @@
 int Distance;	//单位mm
 
 void DataAnalysis(uint8_t* receive){    //数据解析
-	if(USART_RX_STA == 4){
+	if(USART1_RX_STA == 4){
 		Distance = *(receive+1)*256 + *(receive + 2);
-		USART_RX_STA = 0;
+		USART1_RX_STA = 0;
+		if(Distance <= 800)
+		{
+			char s[100];
+			memset(s, 0, sizeof(char));
+			sprintf(s, "Distance: %dmm\t", Distance);
+			ESP8266_cipsend(s);
+		}
 	}
 }
 

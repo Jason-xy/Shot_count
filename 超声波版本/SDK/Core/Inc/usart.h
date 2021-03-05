@@ -36,8 +36,8 @@ extern UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN Private defines */
 #define USART_REC_LEN 4
-extern uint8_t USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大100个字节。
-extern uint16_t USART_RX_STA;       //接收状态标记
+extern uint8_t USART1_RX_BUF[USART_REC_LEN];     //接收缓冲,最大100个字节。
+extern uint16_t USART1_RX_STA;       //接收状态标记
 extern uint8_t aRxBuffer[USART_REC_LEN];//HAL库使用的串口接收缓冲
 /* USER CODE END Private defines */
 

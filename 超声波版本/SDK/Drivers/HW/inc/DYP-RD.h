@@ -21,6 +21,7 @@
 
 #include "stm32f1xx_hal.h"
 #include "usart.h"
+#include "ESP8266.H"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>

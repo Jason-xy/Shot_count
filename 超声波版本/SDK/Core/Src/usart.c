@@ -22,8 +22,8 @@
 
 /* USER CODE BEGIN 0 */
 #include "stdio.h"
-uint8_t USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大100个字节。
-uint16_t USART_RX_STA=0;       //接收状态标记
+uint8_t USART1_RX_BUF[USART_REC_LEN];     //接收缓冲,最大100个字节。
+uint16_t USART1_RX_STA=0;       //接收状态标记
 uint8_t aRxBuffer[USART_REC_LEN];//HAL库使用的串口接收缓冲
 //重定向c库函数printf
 int fputc(int ch, FILE *f)
@@ -192,21 +192,21 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	if(huart->Instance==USART1)//如果是串口1
 	{
-		if(USART_RX_STA == 0 && aRxBuffer[0] == 0xFF){
-			USART_RX_BUF[USART_RX_STA] = 0xFF;
-			USART_RX_STA++;
+		if(USART1_RX_STA == 0 && aRxBuffer[0] == 0xFF){
+			USART1_RX_BUF[USART1_RX_STA] = 0xFF;
+			USART1_RX_STA++;
 		}
-		else if(USART_RX_STA == 3){
-			USART_RX_BUF[USART_RX_STA] = aRxBuffer[0];
-			if(((USART_RX_BUF[0] + USART_RX_BUF[1] + USART_RX_BUF[2])&0x00FF) != USART_RX_BUF[3]){
-				USART_RX_BUF[0] = USART_RX_BUF[1] = USART_RX_BUF[2] = USART_RX_BUF[3] = 0;
-				USART_RX_STA = 0;
+		else if(USART1_RX_STA == 3){
+			USART1_RX_BUF[USART1_RX_STA] = aRxBuffer[0];
+			if(((USART1_RX_BUF[0] + USART1_RX_BUF[1] + USART1_RX_BUF[2])&0x00FF) != USART1_RX_BUF[3]){
+				USART1_RX_BUF[0] = USART1_RX_BUF[1] = USART1_RX_BUF[2] = USART1_RX_BUF[3] = 0;
+				USART1_RX_STA = 0;
 			}
-			else USART_RX_STA++;
+			else USART1_RX_STA++;
 		}
-		else if(USART_RX_STA == 1 || USART_RX_STA == 2){
-			USART_RX_BUF[USART_RX_STA] = aRxBuffer[0];
-			USART_RX_STA++;
+		else if(USART1_RX_STA == 1 || USART1_RX_STA == 2){
+			USART1_RX_BUF[USART1_RX_STA] = aRxBuffer[0];
+			USART1_RX_STA++;
 		}
 		HAL_UART_Receive_IT(&huart1, (uint8_t *)aRxBuffer, 1);
 	}

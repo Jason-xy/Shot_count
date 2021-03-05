@@ -32,7 +32,7 @@ shot_count\main.o: ../Core/Inc/tim.h
 shot_count\main.o: ../Core/Inc/usart.h
 shot_count\main.o: ../Core/Inc/gpio.h
 shot_count\main.o: ..\Drivers\HW\inc\DYP-RD.H
+shot_count\main.o: ..\Drivers\HW\inc\ESP8266.H
 shot_count\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 shot_count\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 shot_count\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-shot_count\main.o: ..\Drivers\HW\inc\ESP8266.h

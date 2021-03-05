@@ -45,7 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
  short MainEventCount=0;
- extern uint8_t USART_RX_BUF[4];
+ extern uint8_t USART1_RX_BUF[4];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -213,7 +213,7 @@ void TIM1_UP_IRQHandler(void)
 	MainEventCount++;
 	if(MainEventCount % 50 == 0)
 	{
-		DataAnalysis(USART_RX_BUF);
+		DataAnalysis(USART1_RX_BUF);
 	}else if(MainEventCount % 49 == 0)
 	{
 		
