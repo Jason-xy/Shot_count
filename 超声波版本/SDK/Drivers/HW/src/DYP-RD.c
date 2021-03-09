@@ -26,10 +26,15 @@ void DataAnalysis(uint8_t* receive){    //Êı¾İ½âÎö
 		USART1_RX_STA = 0;
 		if(Distance <= 800)
 		{
+      if(isGoal(DistanceGroup)){
+        ESP8266_SendJson(DeviceID);
+      }
+      #if DEBUG
 			char s[100];
 			memset(s, 0, sizeof(char));
 			sprintf(s, "Distance: %dmm\t", Distance);
 			ESP8266_cipsend(s);
+      #endif
 		}
 	}
 }

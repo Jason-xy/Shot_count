@@ -16,3 +16,9 @@
   */
 
 #include "shot.h"
+
+int DistanceGroup[10] = {0};
+
+int isGoal(int* DistanceGroup){
+  return 1;
+}

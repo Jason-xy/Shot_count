@@ -158,12 +158,12 @@
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>USART_RX_STA,0x0A</ItemText>
+          <ItemText>USART1_RX_STA</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>USART_RX_BUF</ItemText>
+          <ItemText>USART1_RX_BUF</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

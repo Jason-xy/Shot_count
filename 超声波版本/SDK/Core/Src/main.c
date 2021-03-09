@@ -90,6 +90,7 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   DeviceID[0] = HAL_GetUIDw0();//获取UID
 	DeviceID[1] = HAL_GetUIDw1();
@@ -97,6 +98,7 @@ int main(void)
 	
   HAL_UART_Receive_IT(&huart1, (uint8_t *)aRxBuffer, 1);//传感器数据接收开始
   HAL_TIM_Base_Start_IT(&htim1);//软件运行时基初始化
+  ESP8266_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
