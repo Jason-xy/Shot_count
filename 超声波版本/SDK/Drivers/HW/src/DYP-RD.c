@@ -24,8 +24,7 @@ void DataAnalysis(uint8_t* receive){    //Êý¾Ý½âÎö
 	if(USART1_RX_STA == 4){
 		Distance = *(receive+1)*256 + *(receive + 2);
 		USART1_RX_STA = 0;
-		if(Distance <= 800)
-		{
+		if(Distance <= DistanceMAX && Distance >= DistanceMIN){
       if(isGoal(DistanceGroup)){
         ESP8266_SendJson(DeviceID);
       }
