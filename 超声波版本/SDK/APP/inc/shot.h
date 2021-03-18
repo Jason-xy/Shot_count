@@ -19,6 +19,10 @@
 #define __SHOT_H__
 
 #include "main.h"
+
+#define DistanceMAX 800
+#define DistanceMIN 200
+
 extern int DistanceGroup[10];
 int isGoal(int* DistanceGroup); //½øÇòÅÐ¶¨
 

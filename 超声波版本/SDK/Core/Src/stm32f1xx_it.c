@@ -211,14 +211,14 @@ void TIM1_UP_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_UP_IRQn 0 */
 	MainEventCount++;
-	if(MainEventCount % 500 == 0)
+	if(MainEventCount % 50 == 0)
 	{
 		DataAnalysis(USART1_RX_BUF);
-	}else if(MainEventCount % 490 == 0)
+	}else if(MainEventCount % 49 == 0)
 	{
 		
 	}
-	else if(MainEventCount > 1000)
+	else if(MainEventCount > 100)
 	{
 		MainEventCount = 0;
 	}

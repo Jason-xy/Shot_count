@@ -26,8 +26,6 @@
 extern char msg[100];
 
 void ESP8266_cmd(char* cmd);    //发送AT指令
-void ESP8266_TCP_Connect(void); //连接服务器
-void ESP8266_TCP_Close(void);   //断开服务器
 
 void ESP8266_init(void);    //8266的初始化
 void ESP8266_cipsend(char* data);   //TCP_Server透传数据发送

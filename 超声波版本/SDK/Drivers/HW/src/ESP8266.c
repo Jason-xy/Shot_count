@@ -22,44 +22,33 @@ void ESP8266_cmd(char* cmd){    //发送AT指令
 	HAL_UART_Transmit(&huart2, (uint8_t*)cmd, strlen(cmd), 100);
 }
 
-void ESP8266_TCP_Connect(void){ //TCP连接
-	//"AT+CIPSTART=\"TCP\",\"serverIP\",serverPORT\r\n"
-	ESP8266_cmd("AT+CIPSTART=\"TCP\",\"192.168.4.1\",8080\r\n"); //连接服务器
-}
-
-void ESP8266_TCP_Close(void){	//TCP断开
-	ESP8266_cmd("AT+CIPCLOSE\r\n"); //TCP服务器
-}
-
 void ESP8266_init(void){    //8266的初始化
-	HAL_Delay(500);
+	HAL_Delay(5000);
+	ESP8266_cmd("AT+CIPSTART=\"TCP\",\"192.168.4.1\",8080\r\n"); //连接服务器
+	HAL_Delay(50);
+	ESP8266_cmd("AT+CIPMODE=1\r\n");
+	HAL_Delay(50);
+	ESP8266_cmd("AT+CIPSEND\r\n");
 }
 
 void ESP8266_cipsend(char* data){   //TCP_Server数据发送
-	char s[50];
-	sprintf(s,"AT+CIPSEND=%d\n\r",strlen(data));
-	ESP8266_cmd(s);
+	//非透传模式
+	// char s[50];
+	// sprintf(s,"AT+CIPSEND=%d\r\n",strlen(data));
+	// ESP8266_cmd(s);
 	HAL_UART_Transmit(&huart2, (uint8_t*)data, strlen(data), 100);
 }
 
 void ESP8266_SendJson(uint32_t* DeviceID){   //发送json
 	memset(msg, 0, sizeof(char)*100);
-	sprintf(msg,"{\"type\":\"goal\",\"sn\":\"%08x%08x%08x\"}\n\r",DeviceID[0],DeviceID[1],DeviceID[2]);
-	ESP8266_TCP_Connect();
-	HAL_Delay(50);
+	sprintf(msg,"{\"type\":\"goal\",\"sn\":\"%08x%08x%08x\"}\r\n",DeviceID[0],DeviceID[1],DeviceID[2]);
 	ESP8266_cipsend(msg);
-	ESP8266_TCP_Close();
-	HAL_Delay(50);
 }
 
 void ESP8266_SendBeat(uint32_t* DeviceID){   //发送心跳
 	memset(msg, 0, sizeof(char)*100);
-	sprintf(msg,"{\"type\":\"ping\",\"sn\":\"%08x%08x%08x\"}\n\r",DeviceID[0],DeviceID[1],DeviceID[2]);
-	ESP8266_TCP_Connect();
-	HAL_Delay(50);
+	sprintf(msg,"{\"type\":\"ping\",\"sn\":\"%08x%08x%08x\"}\r\n",DeviceID[0],DeviceID[1],DeviceID[2]);
 	ESP8266_cipsend(msg);
-	ESP8266_TCP_Close();
-	HAL_Delay(50);
 }
 
 char* FindStringValue(char* point,char* key){
