@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"shot_count_2\startup_stm32f103xb.o"
+"shot_count_2\main.o"
+"shot_count_2\gpio.o"
+"shot_count_2\usart.o"
+"shot_count_2\stm32f1xx_it.o"
+"shot_count_2\stm32f1xx_hal_msp.o"
+"shot_count_2\stm32f1xx_hal_gpio_ex.o"
+"shot_count_2\stm32f1xx_hal_tim.o"
+"shot_count_2\stm32f1xx_hal_tim_ex.o"
+"shot_count_2\stm32f1xx_hal_uart.o"
+"shot_count_2\stm32f1xx_hal.o"
+"shot_count_2\stm32f1xx_hal_rcc.o"
+"shot_count_2\stm32f1xx_hal_rcc_ex.o"
+"shot_count_2\stm32f1xx_hal_gpio.o"
+"shot_count_2\stm32f1xx_hal_dma.o"
+"shot_count_2\stm32f1xx_hal_cortex.o"
+"shot_count_2\stm32f1xx_hal_pwr.o"
+"shot_count_2\stm32f1xx_hal_flash.o"
+"shot_count_2\stm32f1xx_hal_flash_ex.o"
+"shot_count_2\stm32f1xx_hal_exti.o"
+"shot_count_2\system_stm32f1xx.o"
+"shot_count_2\esp8266.o"
+--library_type=microlib --strict --scatter "shot_count_2\shot_count.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "shot_count.map" -o shot_count_2\shot_count.axf

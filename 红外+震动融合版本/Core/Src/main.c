@@ -148,7 +148,7 @@ int main(void)
 					if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5)==GPIO_PIN_RESET){
 					num++;
 					ESP8266_SendGoal(DeviceID);
-						
+					HAL_Delay(delay);	
 					break;
 					}
 				}
